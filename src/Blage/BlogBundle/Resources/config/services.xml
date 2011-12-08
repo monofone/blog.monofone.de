@@ -3,18 +3,24 @@
 <container xmlns="http://symfony.com/schema/dic/services"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-
-    <!--
-    <parameters>
-        <parameter key="blage_blog.example.class">Blage\BlogBundle\Example</parameter>
-    </parameters>
-
-    <services>
-        <service id="blage_blog.example" class="%blage_blog.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
-        </service>
+     <services>
+      <service id="blage.blog.admin.category" class="Blage\BlogBundle\Admin\CategoryAdmin">
+        <tag name="sonata.admin" manager_type="orm" group="blog" label ="Category" />
+        <argument />
+        <argument>Blage\BlogBundle\Entity\Category</argument>
+        <argument></argument>
+      </service>
+      <service id="blage.blog.admin.article" class="Blage\BlogBundle\Admin\ArticleAdmin">
+        <tag name="sonata.admin" manager_type="orm" group="blog" label ="Article" />
+        <argument />
+        <argument>Blage\BlogBundle\Entity\Article</argument>
+        <argument></argument>
+      </service>
+      <service id="blage.blog.admin.author" class="Blage\BlogBundle\Admin\AuthorAdmin">
+        <tag name="sonata.admin" manager_type="orm" group="blog" label ="Author" />
+        <argument />
+        <argument>Blage\BlogBundle\Entity\Author</argument>
+        <argument></argument>
+      </service>      
     </services>
-    -->
 </container>

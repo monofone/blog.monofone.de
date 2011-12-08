@@ -14,6 +14,10 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return array();
+        $articles = $this->getDoctrine()
+                ->getRepository('BlageBlogBundle:Article')
+                ->findLatest();
+                
+        return array('articles'=>$articles);
     }
 }

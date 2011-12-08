@@ -1,13 +1,62 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+  <head>
+    <title>blog.monofone</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <!--
+    Deutsch:
+    Vielen Dank für den Blick in den Quellcode, die Seite läuft auf einer 
+    kleinen Application die mit Silex (silex-project.org) umgesetzt wurde.
+    Als Templatesprache kommt Twig zum Einsatz, die Effekte wurden versucht alle
+    mittels CSS 3 umzusetzen, deswegen ist ein aktueller Browser die 
+    Vorraussetzung für ein schönes Erscheinungsbild.
+    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    English
+    Thank you for checking the source code, the site is build using 
+    silex(silex-project.org). For templating Twig is used and all effects are
+    made with CSS 3, so for a complete enjoyment you need a modern browser.
+    -->
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1>monofone</h1>
+        <div id="stoerer"></div>
+        <nav>
+          <ul id="nav">
+            <li id="vita"><a href="http://www.monofone.de/page/vita">vita</a></li>
+            <li id="knowledge"><a href="http://www.monofone.de/page/knowledge">knowledge</a></li>
+            <li id="spare"><a href="http://www.monofone.de/page/spare-time">spare time</a></li>
+            <li id="blog"><a href="/">blog</a></li>
+          </ul>
+        </nav>
+      </header> 
+      <div class="clear"></div>
+      <div id="container">
+        <div id="left_box">
+          {% block left %}
+            <h2>My Badges</h2>
+            {% render 'BlageConnectBundle:Connect:ownSensioBadge' %}
+          {% endblock %}
+        </div>
+        <div id="content_box">
+          <article>
+            {% block content %}{% endblock %}
+          </article>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="footer">
+        <div id="copy">
+          <p>&copy; 2011 Sören Rohweder</p>
+        </div>
+        <div id="contact">
+          <a href="http://www.monofone.de/contact">contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,1 +1,22 @@
-I´m the blog
+{% extends '::base.html.twig' %}
+{% block content %}
+<section>
+{% for article in articles %}
+<article>
+  <div class="article-meta">
+    <div class="article-date">
+      <span class="day">{{article.createdAt|date('d')}}</span>
+      <span class="month">{{article.createdAt|date('F')}}</span>
+      <span class="year">{{article.createdAt|date('Y')}}</span>
+    </div>
+  </div>
+  <div class="article-content">
+    <h2>{{article.title}}</h2>  
+    <h3>in {{article.category.name}}</h3>
+    <p>{{article.content}}</p>
+  </div>
+</article>
+{% endfor %}
+</section>
+{% endblock %}
+

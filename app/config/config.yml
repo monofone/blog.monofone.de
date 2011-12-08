@@ -58,3 +58,9 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+    
+blage_connect:
+  profile_name: monofone
+  
+sonata_admin:
+  title: blog.monofone.de

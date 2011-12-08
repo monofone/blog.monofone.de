@@ -1,0 +1,33 @@
+/* 
+    Document   : mobile.css
+    Created on : Sep 13, 2011, 10:11:18 PM
+    Author     : srohweder
+    Description:
+        Purpose of the stylesheet follows.
+*/
+#left_box{
+  float: none;
+  width: 100%;
+}
+#content_box{
+  margin-left: 40px;
+}
+
+footer{
+  position: static;
+  margin-left: 40px;  
+}
+#footer{
+  width: 60%;
+}
+#copy p{
+  width: 200px;
+}
+dt{
+  float: none;
+  margin-bottom: 2px;
+}
+
+dd{
+  padding-left: 0px;
+}
