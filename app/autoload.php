@@ -6,7 +6,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
     'Symfony'          => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
-    'Blage'            => __DIR__.'/../src',
+    'Blage'            => array(__DIR__.'/../src', __DIR__.'/../vendor/bundles'),
     'Application'      => __DIR__.'/../src',
     'Sensio'           => __DIR__.'/../vendor/bundles',
     'JMS'              => __DIR__.'/../vendor/bundles',

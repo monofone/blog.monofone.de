@@ -84,7 +84,6 @@
 [KnpMenu]
     git=https://github.com/KnpLabs/KnpMenu.git
     target=/bundles/Knp/Bundle/menu
-    version=1.0.0
 
 [SonataUserBundle]
     git=git://github.com/sonata-project/SonataUserBundle.git
@@ -94,3 +93,6 @@
     git=git://github.com/sonata-project/SonataEasyExtendsBundle.git
     target=/bundles/Sonata/EasyExtendsBundle
 
+[BlageConnectBundle]
+    git=git://github.com/monofone/BlageConnectBundle.git
+    target=/bundles/Blage/ConnectBundle
