@@ -1,4 +1,12 @@
 {% extends '::base.html.twig' %}
+
+{% block headassets %}
+  <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+  <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+  <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>
+  <script type="text/javascript" src="http://alexgorbatchev.com.s3.amazonaws.com/pub/sh/3.0.83/scripts/shBrushPhp.js" ></script>
+{% endblock %}
+  
 {% block content %}
 <section>
 {% for article in articles %}
@@ -13,10 +21,15 @@
   <div class="article-content">
     <h2>{{article.title}}</h2>  
     <h3>in {{article.category.name}}</h3>
-    <p>{{article.content}}</p>
+    {{article.content|raw}}
   </div>
 </article>
 {% endfor %}
 </section>
+<script type="text/javascript">
+  SyntaxHighlighter.defaults['toolbar'] = false;
+  SyntaxHighlighter.all()
+</script>  
 {% endblock %}
+  
 
