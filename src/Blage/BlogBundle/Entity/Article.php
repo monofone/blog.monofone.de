@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Blage\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -14,6 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Article
 {
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -21,77 +21,82 @@ class Article
      * 
      */
     protected $id;
-    
+
     /**
      * @ORM\Column(type="string", length=255)
      */
     protected $title;
-    
+
     /**
      * @ORM\Column(type="text")
      */
     protected $content;
-    
+
     /**
      * @ORM\ManyToOne(targetEntity="Author", inversedBy="articles")
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id")
      */
     protected $author;
-    
+
     /**
      * @ORM\ManyToOne(targetEntity="Category", inversedBy="articles")
      * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      */
     protected $category;
-    
+
     /**
      * @ORM\Column(type="datetime")
      */
     protected $createdAt;
-    
+
     /**
      * @ORM\Column(type="datetime")
      */
     protected $updatedAt;
-    
+
     /**
      *
      * @ORM\Column(type="datetime",nullable=true )
      */
-    protected $publishedAt;    
-    
+    protected $publishedAt;
+
     /**
      * @ORM\Column(type="boolean")
      */
-    protected $online  = false;
-    
-    
+    protected $online = false;
+
+    /**
+     *  @ORM\Column(type="string")
+     */
+    protected $slug;
+
     public function __construct()
     {
         $this->updatedAt = new \DateTime();
     }
-    
+
     /**
      * @ORM\preUpdate
      */
     public function setUpdatedAt()
     {
         $this->updatedAt = new \DateTime();
-        
-        if($this->publishedAt == null && $this->online == true)
-        {
+
+        if ($this->publishedAt == null && $this->online == true) {
             $this->publishedAt = new \DateTime();
         }
+        $this->slug = $this->createSlug();
     }
-    
+
     /**
      * @ORM\prePersist
      */
     public function setCreatedAt()
-    { 
+    {
         $this->createdAt = new \DateTime();
+        $this->slug = $this->createSlug();
     }
-        
+
     public function getId()
     {
         return $this->id;
@@ -161,7 +166,7 @@ class Article
     {
         $this->online = $online;
     }
-    
+
     public function isOnline()
     {
         return $this->getOnline();
@@ -177,6 +182,34 @@ class Article
         $this->publishedAt = $publishedAt;
     }
 
+    public function getSlug()
+    {
+        return $this->slug;
+    }
 
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    private function createSlug()
+    {
+        $title = strtolower($this->title);
+        $title = str_replace(array(
+            ' ',
+            'ä',
+            'ö',
+            'ü',
+            'ß'
+                ), array(
+            '-',
+            'a',
+            'o',
+            'u',
+            'ss'
+                ), $title);
+
+        return $title;
+    }
 
 }

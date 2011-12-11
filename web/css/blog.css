@@ -48,6 +48,25 @@ div.syntaxhighlighter{
   -ms-transform:rotate(90deg);
 }
 
+.article-footer
+{
+  margin-top: 20px;
+  padding: 5px 0 0 5px;
+  border-top: 1px solid #FE15FF;
+  width: 600px;
+  font-size: 11px;
+}
+.article-footer a{
+  color: #FFFC15;
+  font-weight: bold;
+}
+
+#error-img{
+  margin: auto;
+  padding-top: 50px;
+  width: 422px;
+}
+
 #footer .badge{
   position: absolute;
   top: -35px;

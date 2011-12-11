@@ -7,12 +7,10 @@
   <script type="text/javascript" src="http://alexgorbatchev.com.s3.amazonaws.com/pub/sh/3.0.83/scripts/shBrushPhp.js" ></script>
   <script type="text/javascript" src="http://alexgorbatchev.com.s3.amazonaws.com/pub/sh/3.0.83/scripts/shBrushBash.js" ></script>
 {% endblock %}
-  
+{% block title %}{{ parent() }} | {{article.title}} {% endblock %}
 {% block content %}
 <section>
-{% for article in articles %}
-  {% include "BlageBlogBundle:Default:article_entry.html.twig" %}
-{% endfor %}
+{% include "BlageBlogBundle:Default:article_entry.html.twig" %}
 </section>
 <script type="text/javascript">
   SyntaxHighlighter.defaults['toolbar'] = false;
