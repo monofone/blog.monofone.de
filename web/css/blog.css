@@ -1,0 +1,56 @@
+
+div.syntaxhighlighter{
+  margin-top: 10px;
+  width: 600px;
+}
+
+/*#stoerer{
+  position: absolute;
+  top: 2px;
+  left: 70%;
+  width:120px;
+  height: 120px;
+  background: url(../img/inside_star.png) 0 0 transparent;
+}*/
+
+.article-meta{
+  float:left;
+}
+.article-content{
+  padding-left: 110px;
+}
+.article-date{ 
+  -webkit-box-shadow: 8px 8px 8px #666;
+  position: relative;
+  padding: 55px 74px 10px 10px;
+  background-color: #FFFC15;
+  color: #FE15FF;
+}
+.article-date .month{ 
+  position:absolute;
+  top: 45px;
+  left: 5px;
+}
+.article-date .day{ 
+  position:absolute;
+  top: 0px;
+  left: 5px;
+  font-size: 45px;
+}
+.article-date .year{
+  position:absolute;
+  top: 14px;
+  left: 50px;
+  display:block;
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+}
+
+#footer .badge{
+  position: absolute;
+  top: -35px;
+  left: 330px;
+  width: 200px;
+}

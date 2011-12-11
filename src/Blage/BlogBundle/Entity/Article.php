@@ -54,6 +54,17 @@ class Article
      */
     protected $updatedAt;
     
+    /**
+     *
+     * @ORM\Column(type="datetime",nullable=true )
+     */
+    protected $publishedAt;    
+    
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    protected $online  = false;
+    
     
     public function __construct()
     {
@@ -66,6 +77,11 @@ class Article
     public function setUpdatedAt()
     {
         $this->updatedAt = new \DateTime();
+        
+        if($this->publishedAt == null && $this->online == true)
+        {
+            $this->publishedAt = new \DateTime();
+        }
     }
     
     /**
@@ -75,7 +91,7 @@ class Article
     { 
         $this->createdAt = new \DateTime();
     }
-    
+        
     public function getId()
     {
         return $this->id;
@@ -135,6 +151,32 @@ class Article
     {
         return $this->updatedAt;
     }
+
+    public function getOnline()
+    {
+        return $this->online;
+    }
+
+    public function setOnline($online)
+    {
+        $this->online = $online;
+    }
+    
+    public function isOnline()
+    {
+        return $this->getOnline();
+    }
+
+    public function getPublishedAt()
+    {
+        return $this->publishedAt;
+    }
+
+    public function setPublishedAt($publishedAt)
+    {
+        $this->publishedAt = $publishedAt;
+    }
+
 
 
 }

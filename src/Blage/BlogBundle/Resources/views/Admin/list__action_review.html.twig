@@ -1,0 +1,5 @@
+{% if not object.isOnline %}
+<a href="{{ admin.generateObjectUrl('review',object)}}">
+<img src="{{ asset('bundles/sonataadmin/famfamfam/page_white_find.png') }}" alt="send to review" />
+</a>
+{% endif %}

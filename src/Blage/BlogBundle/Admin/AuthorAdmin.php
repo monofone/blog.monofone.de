@@ -18,6 +18,9 @@ class AuthorAdmin extends Admin
         $formMapper
                 ->with('General')
                 ->add('username', null, array('required' => true))
+                ->add('email', null, array('required' => true))
+                ->add('firstName', null, array('required' => true))
+                ->add('lastName', null, array('required' => true))
                 ->end()
         ;
     }
@@ -30,10 +33,12 @@ class AuthorAdmin extends Admin
                 ;
     }
 
-    public function configureLIstFields(ListMapper $listMapper)
+    public function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('id')
-            ->add('username');
+            ->addIdentifier('username')
+            ->add('firstName')
+            ->add('lastName')
+            ->add('email');
     }
 }

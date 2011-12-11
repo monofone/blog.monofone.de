@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 /**
  * Description of ArticleAdmin
@@ -22,6 +23,7 @@ class ArticleAdmin extends Admin
                 ->add('title')
                 ->add('category', 'sonata_type_model')
                 ->add('content')
+                ->add('online', null, array('required' => false))
                 
         ->end()
         ->with('Author')
@@ -32,10 +34,21 @@ class ArticleAdmin extends Admin
     public function configureListFields(ListMapper $listMapper)
     {
         $listMapper->addIdentifier('title')
+                ->add('online', null, array('editable' => true))
                 ->add('createdAt')
                 ->add('updatedAt')
                 ->add('id')
+                ->add('_action','actions', array(
+                    'actions' => array(
+                        'review' =>array('template' => 'BlageBlogBundle:Admin:list__action_review.html.twig')
+                    )
+                ))
                 ;
+    }
+    
+    public function configureRoutes(RouteCollection $collection)
+    {
+        $collection->add('review', $this->getRouterIdParameter().'/review');
     }
     
 }
