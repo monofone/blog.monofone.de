@@ -64,3 +64,8 @@ blage_connect:
   
 sonata_admin:
   title: blog.monofone.de
+  
+virtal_disqus:
+  disqus_shortname: blogmonofonede
+  disqus_developer: true
+  

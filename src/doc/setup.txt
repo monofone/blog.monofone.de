@@ -1,0 +1,8 @@
+Sonata Setup
+
+http://sonata-project.org/bundles/admin/master/doc/reference/installation.html
+http://sonata-project.org/bundles/doctrine-orm-admin/master/doc/reference/installation.html
+http://sonata-project.org/bundles/user/master/doc/reference/installation.html
+
+After all deps a downloaded run
+php app/console sonata:easy-extends:generate SonataUserBundle --dest=src

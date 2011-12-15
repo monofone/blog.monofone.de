@@ -8,6 +8,14 @@ div.syntaxhighlighter{
   width: 600px;
 }
 
+div#disqus_thread{
+  width: 600px;
+  padding-left: 111px;
+}
+div#dsq-global-toolbar, div#dsq-account-dropdown, div#dsq-subscribe, div#dsq-sort-by{
+  display: none;
+}
+
 /*#stoerer{
   position: absolute;
   top: 2px;
@@ -55,6 +63,7 @@ div.syntaxhighlighter{
 .article-footer
 {
   margin-top: 20px;
+  margin-left: 111px;
   padding: 5px 0 0 5px;
   border-top: 1px solid #FFFC15;
   width: 600px;

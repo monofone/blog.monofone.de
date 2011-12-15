@@ -40,6 +40,7 @@
 [SensioFrameworkExtraBundle]
     git=http://github.com/sensio/SensioFrameworkExtraBundle.git
     target=/bundles/Sensio/Bundle/FrameworkExtraBundle
+    version=2.0
 
 [JMSSecurityExtraBundle]
     git=http://github.com/schmittjoh/JMSSecurityExtraBundle.git
@@ -96,3 +97,7 @@
 [BlageConnectBundle]
     git=git://github.com/monofone/BlageConnectBundle.git
     target=/bundles/Blage/ConnectBundle
+
+[DisQusBundle]
+    git=http://github.com/virtal/VirtalDisqusBundle.git
+    target=/bundles/Virtal/Bundle/DisqusBundle

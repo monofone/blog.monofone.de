@@ -9,6 +9,7 @@ $loader->registerNamespaces(array(
     'Blage'            => array(__DIR__.'/../src', __DIR__.'/../vendor/bundles'),
     'Application'      => __DIR__.'/../src',
     'Sensio'           => __DIR__.'/../vendor/bundles',
+    'Virtal'           => __DIR__.'/../vendor/bundles',
     'JMS'              => __DIR__.'/../vendor/bundles',
     'FOS'              => __DIR__.'/../vendor/bundles',
     'Doctrine\\Common' => __DIR__.'/../vendor/doctrine-common/lib',

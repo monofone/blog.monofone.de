@@ -11,6 +11,9 @@
 {% block content %}
 <section>
 {% include "BlageBlogBundle:Default:article_entry.html.twig" %}
+    <div id="disqus_thread"></div>
+    {% set identifier = 'blog-article-' ~ article.id %}
+    {{ disqus_comments({'disqus_identifier': identifier }) }}
 </section>
 <script type="text/javascript">
   SyntaxHighlighter.defaults['toolbar'] = false;
