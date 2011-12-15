@@ -1,4 +1,8 @@
 
+footer{
+  left: 211px;
+}
+
 div.syntaxhighlighter{
   margin-top: 10px;
   width: 600px;
@@ -52,13 +56,24 @@ div.syntaxhighlighter{
 {
   margin-top: 20px;
   padding: 5px 0 0 5px;
-  border-top: 1px solid #FE15FF;
+  border-top: 1px solid #FFFC15;
   width: 600px;
   font-size: 11px;
+  line-height: 18px;
 }
 .article-footer a{
   color: #FFFC15;
   font-weight: bold;
+}
+
+.article-footer .article-meta
+{
+  float:left;
+}
+
+.article-footer .article-social
+{
+  float:right;
 }
 
 #error-img{

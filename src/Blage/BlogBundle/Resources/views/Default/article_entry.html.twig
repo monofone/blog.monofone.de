@@ -11,14 +11,16 @@
     <h3>in {{article.category.name}}</h3>
     {{article.content|raw}}
     <div class="article-footer">
+      <div class="article-meta">
         <span class="author">Author: {{article.author.firstname}} {{article.author.lastname}}</span>
         <span class="last-update">Letzte Änderung {{ article.updatedAt|date('d.m.Y') }}</span>
         {% set article_url = path('blage_blog_default_article',{'year':  article.createdAt|date('Y'),'month':  article.createdAt|date('m'),'slug':article.slug} ) %}
         <span class="perma-link"><a href="{{ article_url }}">perma-link</a></span>
-        <span>
+      </div>
+      <div class="article-social">
         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://blog.monofone.de{{article_url}}" data-via="monofone" data-lang="de" data-count="none">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </span>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
     </div>
   </div>
 </article>
