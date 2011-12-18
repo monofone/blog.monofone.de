@@ -22,7 +22,7 @@ class ArticleAdmin extends Admin
         ->with('General')
                 ->add('title')
                 ->add('category', 'sonata_type_model')
-                ->add('content')
+                ->add('content','textarea')
                 ->add('online', null, array('required' => false))
                 
         ->end()
@@ -40,15 +40,16 @@ class ArticleAdmin extends Admin
                 ->add('id')
                 ->add('_action','actions', array(
                     'actions' => array(
-                        'review' =>array('template' => 'BlageBlogBundle:Admin:list__action_review.html.twig')
+                        'preview' =>array('template' => 'BlageBlogBundle:Admin:list__action_preview.html.twig'),
+                        'review' =>array('template' => 'BlageBlogBundle:Admin:list__action_review.html.twig'),
                     )
-                ))
-                ;
+                ));
     }
     
     public function configureRoutes(RouteCollection $collection)
     {
         $collection->add('review', $this->getRouterIdParameter().'/review');
+        $collection->add('preview', $this->getRouterIdParameter().'/preview');
     }
     
 }

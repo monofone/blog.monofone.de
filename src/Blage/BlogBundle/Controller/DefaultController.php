@@ -29,7 +29,11 @@ class DefaultController extends Controller
  {
      $article = $this->getDoctrine()
                 ->getRepository('BlageBlogBundle:Article')
-                ->findOneBySlug($slug);
+                ->findOneBy(array(
+                    'slug' => $slug,
+                    'online' => true 
+                    ));
+                        
      
      if(!$article){
          throw new NotFoundHttpException(sprintf("article with slug %s not found", $slug));
