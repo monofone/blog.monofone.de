@@ -1,3 +1,9 @@
+{% if not object.isOnline %}
 <a href="{{ admin.generateObjectUrl('preview',object)}}" target="_blank">
-<img src="{{ asset('bundles/sonataadmin/famfamfam/page_white_magnify.png') }}" alt="send to review" />
+<img src="{{ asset('bundles/sonataadmin/famfamfam/page_white_magnify.png') }}" alt="preview page" />
 </a>
+{% else %}
+<a href="{{ path('blage_blog_default_article',{'year':  object.createdAt|date('Y'),'month':  object.createdAt|date('m'),'slug':object.slug})}}" target="_blank">
+<img src="{{ asset('bundles/sonataadmin/famfamfam/page_go.png') }}" alt="view page" />
+</a>
+{% endif %}
