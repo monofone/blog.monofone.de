@@ -11,10 +11,6 @@ security:
     providers:
         fos_userbundle:
             id: fos_user.user_manager
-        in_memory:
-            users:
-                user:  { password: userpass, roles: [ 'ROLE_USER' ] }
-                admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
 
     firewalls:
         # -> custom firewall for the admin area of the URL
@@ -66,4 +62,4 @@ security:
 fos_user:
   db_driver: orm
   user_class: Blage\BlogBundle\Entity\Author
-  firewall_name: blog_admin
+  firewall_name: admin
