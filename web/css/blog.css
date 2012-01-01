@@ -29,11 +29,21 @@ div#dsq-global-toolbar, div#dsq-account-dropdown, div#dsq-subscribe, div#dsq-sor
 .article-meta{
   float:left;
 }
+
 .article-content{
   padding-left: 110px;
 }
+
+.article-content a{
+  color: #FFFC15;
+}
+
 .article-date{ 
+  -box-shadow: 8px 8px 8px #666;
   -webkit-box-shadow: 8px 8px 8px #666;
+  -moz-box-shadow: 8px 8px 8px #666;
+  -o-box-shadow: 8px 8px 8px #666;
+  -ms-box-shadow: 8px 8px 8px #666;
   position: relative;
   padding: 55px 74px 10px 10px;
   background-color: #FFFC15;
@@ -44,12 +54,14 @@ div#dsq-global-toolbar, div#dsq-account-dropdown, div#dsq-subscribe, div#dsq-sor
   top: 45px;
   left: 5px;
 }
+
 .article-date .day{ 
   position:absolute;
   top: 0px;
   left: 5px;
   font-size: 45px;
 }
+
 .article-date .year{
   position:absolute;
   top: 14px;
