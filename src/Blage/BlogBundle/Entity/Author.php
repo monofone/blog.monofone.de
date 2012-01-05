@@ -39,6 +39,7 @@ class Author extends \FOS\UserBundle\Entity\User
     public function __construct()
     {
         $this->articles = new ArrayCollection();
+        $this->algorithm = 'sha512';
         parent::__construct();
     }
 
