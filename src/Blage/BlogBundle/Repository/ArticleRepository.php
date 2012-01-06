@@ -29,7 +29,7 @@ class ArticleRepository extends EntityRepository
                 ->select('a')
                 ->join('a.category', 'c', \Doctrine\ORM\Query\Expr\Join::ON, 'a.category = c' )
                 ->where('a.online = :online')
-                ->orderBy('a.createdAt', 'DESC')
+                ->orderBy('a.publishedAt', 'DESC')
                 ->getQuery()
                 ->setParameter('online', true)
                 ->getResult();
