@@ -16,7 +16,7 @@ class ArticleRepository extends EntityRepository
     {
         return $this->createQueryBuilder('a')
                 ->where('a.online = :online')
-                ->orderBy('a.createdAt', 'DESC')
+                ->orderBy('a.publishedAt', 'DESC')
                 ->setMaxResults($limit)
                 ->getQuery()
                 ->setParameter('online', true)
