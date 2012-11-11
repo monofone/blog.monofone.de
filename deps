@@ -99,5 +99,5 @@
     target=/bundles/Blage/ConnectBundle
 
 [DisQusBundle]
-    git=http://github.com/virtal/VirtalDisqusBundle.git
+    git=http://github.com/pilot/VirtalDisqusBundle.git
     target=/bundles/Virtal/Bundle/DisqusBundle
