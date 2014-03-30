@@ -1,8 +1,3 @@
-BlageConnectBundle:
-    resource: "@BlageConnectBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 BlageBlogBundle:
     resource: "@BlageBlogBundle/Controller/"
     type:     annotation

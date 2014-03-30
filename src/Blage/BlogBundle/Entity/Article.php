@@ -76,7 +76,7 @@ class Article
     }
 
     /**
-     * @ORM\preUpdate
+     * @ORM\PrePersist
      */
     public function setUpdatedAt()
     {
@@ -89,7 +89,7 @@ class Article
     }
 
     /**
-     * @ORM\prePersist
+     * @ORM\PrePersist
      */
     public function setCreatedAt()
     {

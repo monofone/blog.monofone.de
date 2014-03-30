@@ -6,3 +6,13 @@
 /app/config/parameters.ini
 /nbproject
 /catalog.xml
+/deployment/bin
+/deployment/Configuration
+/deployment/Data
+/deployment/Packages
+/deployment/Web
+/deployment/flow*
+/deployment/Readme.txt
+/deployment/Upgrading.txt
+deploy/.gitignore
+/.idea

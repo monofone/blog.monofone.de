@@ -1,0 +1,25 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "http://github.com/monofone/BlageConnectBundle.git"
+        }
+    ],
+    "require": {
+        "symfony/symfony": "~2.4.0",
+        "monolog/monolog": "~1.7.0",
+        "monofone/connect-bundle": "dev-master",
+        "symfony/monolog-bundle": "~2.4.1",
+        "symfony/swiftmailer-bundle": "~2.3.5",
+        "doctrine/doctrine-bundle": "~1.2.0",
+        "symfony/assetic-bundle": "2.3.*@dev",
+        "sensio/framework-extra-bundle": "3.0.*@dev",
+        "jms/security-extra-bundle": "1.5.*@dev",
+        "sonata-project/admin-bundle": "dev-master",
+        "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev",
+        "friendsofsymfony/user-bundle": "~1.3.3",
+        "sensio/distribution-bundle": "~2.3",
+        "sonata-project/user-bundle": "~2.2.4"
+
+    }
+}

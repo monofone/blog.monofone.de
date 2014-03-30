@@ -1,6 +1,7 @@
 security:
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext
+        Blage\BlogBundle\Entity\Author: sha1
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
@@ -63,3 +64,5 @@ fos_user:
   db_driver: orm
   user_class: Blage\BlogBundle\Entity\Author
   firewall_name: admin
+  group:
+      group_class: Application\Sonata\UserBundle\Entity\Group

@@ -26,5 +26,5 @@ swiftmailer:
     delivery_address: s.rohweder@blage.net
     disable_delivery:  true    
     
-virtal_disqus:
-  disqus_developer: true    
+#virtal_disqus:
+#  disqus_developer: true
