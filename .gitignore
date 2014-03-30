@@ -16,3 +16,4 @@
 /deployment/Upgrading.txt
 deploy/.gitignore
 /.idea
+/css/*
