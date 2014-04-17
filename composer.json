@@ -3,12 +3,17 @@
         {
             "type": "vcs",
             "url": "http://github.com/monofone/BlageConnectBundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "http://github.com/monofone/VirtalDisqusBundle.git"
         }
     ],
     "require": {
         "symfony/symfony": "~2.4.0",
         "monolog/monolog": "~1.7.0",
         "monofone/connect-bundle": "dev-master",
+        "monofone/virtaldisqus": "dev-master",
         "symfony/monolog-bundle": "~2.4.1",
         "symfony/swiftmailer-bundle": "~2.3.5",
         "doctrine/doctrine-bundle": "~1.2.0",

@@ -1,0 +1,6 @@
+<h4>Lately</h4>
+<ol class="list-unstyled">
+    {% for article in articles %}
+        <li><a href="{{ path('blage_blog_default_article',{'year':  article.createdAt|date('Y'),'month':  article.createdAt|date('m'),'slug':article.slug} ) }}">{{ article.createdAt|date('d.m.Y') }}|{{ article.title }}</a></li>
+    {% endfor %}
+</ol>

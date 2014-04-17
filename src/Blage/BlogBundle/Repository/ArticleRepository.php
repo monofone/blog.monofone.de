@@ -12,6 +12,10 @@ use Blage\BlogBundle\Entity\Category;
  */
 class ArticleRepository extends EntityRepository
 {
+    /**
+     * @param int $limit
+     * @return array
+     */
     public function findLatest($limit = 5)
     {
         return $this->createQueryBuilder('a')
@@ -22,7 +26,11 @@ class ArticleRepository extends EntityRepository
                 ->setParameter('online', true)
                 ->getResult();
     }
-    
+
+    /**
+     * @param Category $category
+     * @return array
+     */
     public function findByCategory(Category $category)
     {
         return $this->createQueryBuilder('a')

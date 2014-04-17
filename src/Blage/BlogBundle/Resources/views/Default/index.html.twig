@@ -1,15 +1,17 @@
 {% extends '::base.html.twig' %}
 
 {% block content %}
-<section>
-{% for article in articles %}
-  {% include "BlageBlogBundle:Default:article_entry.html.twig" %}
-{% endfor %}
-</section>
-<script type="text/javascript">
-  SyntaxHighlighter.defaults['toolbar'] = false;
-  SyntaxHighlighter.all()
-</script>  
-{% endblock %}
-  
+<div class="col-sm-8 blog-main">
+    <div id="left_box">
+        {% block left %}
 
+        {% endblock %}
+    </div>
+    <div id="content_box">
+        {% for article in articles %}
+            {% include "BlageBlogBundle:Default:article_entry.html.twig" %}
+        {% endfor %}
+    </div>
+
+</div><!-- /.blog-main -->
+{% endblock %}

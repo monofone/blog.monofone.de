@@ -1,25 +1,22 @@
 {% extends '::base.html.twig' %}
 
-{% block headassets %}
-  <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
-  <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
-  <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>
-    <script type="text/javascript" src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPhp.js" ></script>
-    <script type="text/javascript" src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushBash.js" ></script>
-    <script type="text/javascript" src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js" ></script>
-{% endblock %}
 {% block title %}{{ parent() }} | {{article.title}} {% endblock %}
+
 {% block content %}
-<section>
-{% include "BlageBlogBundle:Default:article_entry.html.twig" %}
-    <div id="disqus_thread"></div>
-    {% set identifier = 'blog-article-' ~ article.id %}
-    {{ disqus_comments({'disqus_identifier': identifier }) }}
-</section>
-<script type="text/javascript">
-  SyntaxHighlighter.defaults['toolbar'] = false;
-  SyntaxHighlighter.all()
-</script>  
+<div class="col-sm-8 blog-main">
+    <div id="left_box">
+        {% block left %}
+
+        {% endblock %}
+    </div>
+    {% include "BlageBlogBundle:Default:article_entry.html.twig" %}
+
+    <!--
+    <ul class="pager">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>-->
+</div><!-- /.blog-main -->
 {% endblock %}
-  
+
 

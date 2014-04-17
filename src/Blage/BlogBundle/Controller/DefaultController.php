@@ -16,29 +16,44 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $articles = $this->getDoctrine()
-                ->getRepository('BlageBlogBundle:Article')
-                ->findLatest();
-                
-        return array('articles'=>$articles);
+            ->getRepository('BlageBlogBundle:Article')
+            ->findLatest(1);
+
+        return array('articles' => $articles);
     }
+
     /**
      * @Route("/article/{year}/{month}/{slug}")
      * @Template()
      */
- public function articleAction($year, $month, $slug)
- {
-     $article = $this->getDoctrine()
-                ->getRepository('BlageBlogBundle:Article')
-                ->findOneBy(array(
+    public function articleAction($year, $month, $slug)
+    {
+        $article = $this->getDoctrine()
+            ->getRepository('BlageBlogBundle:Article')
+            ->findOneBy(
+                array(
                     'slug' => $slug,
-                    'online' => true 
-                    ));
-                        
-     
-     if(!$article){
-         throw new NotFoundHttpException(sprintf("article with slug %s not found", $slug));
-     }
-     
-     return array('article' => $article);
- }
+                    'online' => true
+                )
+            );
+
+
+        if (!$article) {
+            throw new NotFoundHttpException(sprintf("article with slug %s not found", $slug));
+        }
+
+        return array('article' => $article);
+    }
+
+    /**
+     * @Template()
+     */
+    public function recentArticlesAction() {
+        $articles = $this->getDoctrine()
+            ->getRepository('BlageBlogBundle:Article')
+            ->findLatest(10);
+
+        return array('articles' => $articles);
+    }
+
 }
