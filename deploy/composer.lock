@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "5457f08809983114aebd0a95dfa9e58a50bf560a"
+                "reference": "df19b48f557987e0a9bddff0c12dde37d5bcb757"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/5457f08809983114aebd0a95dfa9e58a50bf560a",
-                "reference": "5457f08809983114aebd0a95dfa9e58a50bf560a",
+                "url": "https://api.github.com/repos/composer/installers/zipball/df19b48f557987e0a9bddff0c12dde37d5bcb757",
+                "reference": "df19b48f557987e0a9bddff0c12dde37d5bcb757",
                 "shasum": ""
             },
             "replace": {
@@ -46,7 +46,7 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama",
+                    "homepage": "http://dontkry.com",
                     "role": "Developer"
                 }
             ],
@@ -87,7 +87,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-03-26 23:15:27"
+            "time": "2014-04-15 03:26:48"
         },
         {
             "name": "doctrine/annotations",
@@ -95,12 +95,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "316b956b70c0ceab28ba0817fc3343624aa83b56"
+                "reference": "ce2b5dae7b996bd231a9f178750aec536aba7e14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/316b956b70c0ceab28ba0817fc3343624aa83b56",
-                "reference": "316b956b70c0ceab28ba0817fc3343624aa83b56",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/ce2b5dae7b996bd231a9f178750aec536aba7e14",
+                "reference": "ce2b5dae7b996bd231a9f178750aec536aba7e14",
                 "shasum": ""
             },
             "require": {
@@ -127,7 +127,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan H. Wage",
+                    "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -148,7 +148,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -159,7 +159,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2014-03-03 13:00:20"
+            "time": "2014-04-16 13:36:10"
         },
         {
             "name": "doctrine/cache",
@@ -634,12 +634,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "78c335cc80633584263adb166640dd5b95cf5156"
+                "reference": "98173032ac68bae9dfb61353414d58290e1969a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/78c335cc80633584263adb166640dd5b95cf5156",
-                "reference": "78c335cc80633584263adb166640dd5b95cf5156",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/98173032ac68bae9dfb61353414d58290e1969a8",
+                "reference": "98173032ac68bae9dfb61353414d58290e1969a8",
                 "shasum": ""
             },
             "require": {
@@ -697,7 +697,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2014-02-08 16:28:25"
+            "time": "2014-04-16 21:43:31"
         },
         {
             "name": "symfony/console",
@@ -706,12 +706,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "ab9359cbf100259625c756b57c578eea15b3c464"
+                "reference": "822312aea23a8ab345402a62ffdcc5acd2739c32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/ab9359cbf100259625c756b57c578eea15b3c464",
-                "reference": "ab9359cbf100259625c756b57c578eea15b3c464",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/822312aea23a8ab345402a62ffdcc5acd2739c32",
+                "reference": "822312aea23a8ab345402a62ffdcc5acd2739c32",
                 "shasum": ""
             },
             "require": {
@@ -754,7 +754,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-03-19 15:49:37"
+            "time": "2014-04-16 10:36:34"
         },
         {
             "name": "symfony/dom-crawler",
@@ -861,7 +861,7 @@
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/Packages/TYPO3.Eel.git",
-                "reference": "feb5d4df0308c5b171befdb61e088f1c5eb31460"
+                "reference": "581050414f7a50c1d54e992ae18b2973897337e4"
             },
             "require": {
                 "typo3/flow": "*"
@@ -877,7 +877,7 @@
                 "LGPL-3.0+"
             ],
             "description": "The Embedded Expression Language (Eel) is a building block for creating Domain Specific Languages",
-            "time": "2014-02-27 13:55:48"
+            "time": "2014-04-07 20:02:59"
         },
         {
             "name": "typo3/flow",
@@ -885,7 +885,7 @@
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/Packages/TYPO3.Flow.git",
-                "reference": "b89e2b038d87a6774dfda8368097b0986c6de184"
+                "reference": "2c5e09a3a4d72816770bfedc14ae8e86d31df4d7"
             },
             "require": {
                 "composer/installers": "~1.0.2",
@@ -917,7 +917,7 @@
             ],
             "description": "TYPO3 Flow Application Framework",
             "homepage": "http://flow.typo3.org",
-            "time": "2014-03-27 13:01:10"
+            "time": "2014-04-15 15:01:29"
         },
         {
             "name": "typo3/fluid",
@@ -925,7 +925,7 @@
             "source": {
                 "type": "git",
                 "url": "git://git.typo3.org/Packages/TYPO3.Fluid.git",
-                "reference": "ec8825cac5588cdef1a58e101c81ee8288f9288c"
+                "reference": "e7e1081e5cb16b31639e84f0b6448dde5b1873ef"
             },
             "require": {
                 "typo3/flow": "*"
@@ -941,7 +941,7 @@
                 "LGPL-3.0+"
             ],
             "description": "Next-Generation Templating Framework for TYPO3 Flow and TYPO3 Neos, also backported to TYPO3 CMS",
-            "time": "2014-03-14 14:26:55"
+            "time": "2014-04-09 22:08:37"
         },
         {
             "name": "typo3/party",
