@@ -76,6 +76,7 @@ class Article
     }
 
     /**
+     * @ORM\PreUpdate
      * @ORM\PrePersist
      */
     public function setUpdatedAt()
